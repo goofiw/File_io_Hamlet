@@ -15,8 +15,7 @@ open("hamlet.txt", "r") do |file|
 		
 		if /^\s\sHam/.match(line)
 			hamlet_speaking = true
-			#puts line
-    elsif !!/^\s\s[^H][^a][^m]/.match(line)
+    elsif !/^\s{4}/.match(line)
     	hamlet_speaking = false
     end
 		puts line if hamlet_speaking
